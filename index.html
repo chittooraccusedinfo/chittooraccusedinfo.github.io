@@ -256,6 +256,15 @@ button{font-family:inherit}
 .iw-text span b{color:#d93636;font-size:15px}
 @media (max-width:560px){.idle-warn{flex-wrap:wrap}.idle-warn .btn{width:100%}}
 
+.dev-credit{display:inline-block;padding:9px 22px;border-radius:40px;text-align:center}
+.dev-credit small{display:block;font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;opacity:.75}
+.dev-credit b{display:block;font:700 14.5px var(--head)}
+.dev-credit span{display:block;font-size:12px;opacity:.85}
+.login-credit{margin-top:18px;background:rgba(255,255,255,.07);border:1px solid rgba(242,183,5,.35);color:#e6edf8}
+.login-credit b{color:var(--gold2)}
+.app-credit{margin-top:10px;background:#fff;border:1px solid var(--border);color:#46536b;box-shadow:0 4px 14px rgba(14,33,66,.06)}
+.app-credit b{color:var(--navy)}
+
 /* ======================== RESPONSIVE ======================= */
 @media (max-width:1150px){ .login-screen{grid-template-columns:190px 1fr 190px} .wall-track{padding:18px 16px} }
 @media (max-width:860px){
@@ -370,6 +379,7 @@ button{font-family:inherit}
       </div>
     </div>
     <p class="legal">Unauthorised access or sharing of login credentials is prohibited. All logins, searches and exports are recorded with device details.</p>
+    <div class="dev-credit login-credit"><div><small>Designed &amp; Developed by</small><b>Kola.Bapuji</b><span>IT Core Team, Chittoor</span></div></div>
   </main>
 
   <aside class="wall wall-right">
@@ -446,7 +456,9 @@ button{font-family:inherit}
       <div class="pagination" id="pagination"></div>
     </section>
   </main>
-  <footer class="app-foot">© Chittoor District Police · For official use only · Single-device secure session</footer>
+  <footer class="app-foot">© Chittoor District Police · For official use only · Single-device secure session<br>
+    <div class="dev-credit app-credit"><div><small>Designed &amp; Developed by</small><b>Kola.Bapuji</b><span>IT Core Team, Chittoor</span></div></div>
+  </footer>
 </div>
 
 <div id="modalRoot"></div>
@@ -456,6 +468,7 @@ button{font-family:inherit}
 /* ===================== CONFIG / STATE ===================== */
 /* ►►► PASTE YOUR APPS SCRIPT WEB-APP URL HERE (Deploy → Manage deployments → Web app URL, ends with /exec) ◄◄◄ */
 const API_URL = 'https://script.google.com/macros/s/AKfycbzsCiCygfAXG3VdnEYiScgpP4qR1EfoGUS-ph4pAUELFeZPTUARA_Nns-63vLqfZ5Uh/exec';
+
 const TOKEN_KEY = 'cais_session_token';
 const DEVICE_KEY = 'cais_device_id';
 const USER_IDLE_LOGOUT_MIN = 10;           // auto-logout after 10 min with no response from the user
